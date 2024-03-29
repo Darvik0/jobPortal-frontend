@@ -24,7 +24,11 @@ module.exports = {
       },
     },
     extend: {
+      backgroundImage: {
+        'hero': "url('../images/bgimage.png')",
+       },
       colors: {
+        'diffBlue' : '#0038FF',
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
         ring: "hsl(var(--ring))",

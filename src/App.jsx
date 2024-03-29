@@ -1,6 +1,8 @@
 import { useState } from 'react'
+import * as React from "react";
+import * as ReactDOM from "react-dom/client";
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import { Button } from "./components/ui/button"
-import { Switch } from "@/components/ui/switch"
 import { Alert, AlertDescription, AlertTitle } from "@/components/ui/alert"
 import {
   AlertDialog,
@@ -15,21 +17,24 @@ import {
 } from "@/components/ui/alert-dialog"
 
 import './App.css'
-import { Terminal } from 'lucide-react'
+import { LogIn, Terminal } from 'lucide-react'
 import Login from './Pages/Login'
 import SignUp from './Pages/SignUp'
+import Crash from './Pages/Crash';
+import LandingPage from './Pages/LandingPage';
 
 function App() {
   const [count, setCount] = useState(0)
 
   return (
-    <>
-
-
-     {/* <Login></Login> */}
-     <SignUp></SignUp>
- 
-    </>
+    <BrowserRouter>
+      <Routes>
+        <Route path='/' exact element={<LandingPage />} />
+        <Route path='/sign-in' exact element={<Login />} />
+        <Route path='/sign-up' exact element={<SignUp />} />
+        <Route path='/*' exact element={<Crash />} />
+      </Routes>
+    </BrowserRouter>
   )
 }
 

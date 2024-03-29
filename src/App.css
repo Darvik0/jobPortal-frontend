@@ -40,10 +40,41 @@
   }
 }
 
+.background-image {
+  background-image: url('/src/images/bgimage.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+ }
 .card {
   padding: 2em;
 }
 
 .read-the-docs {
   color: #888;
+}
+
+@keyframes spin-reverse {
+  0% {
+      transform: rotate(0deg);
+  }
+  100% {
+      transform: rotate(-360deg);
+  }
+}
+
+.fixed {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+}
+
+.bgrblack {
+  background-color: black;
+}
+
+
+
+.spin-reverse {
+  animation: spin-reverse 3s linear infinite; /* Adjust duration and other properties as needed */
 }
