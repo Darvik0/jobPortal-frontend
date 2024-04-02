@@ -243,7 +243,7 @@ const ListCard = () => (
      <CardContent>
       <div className='  space-x-2'>
      <Badge className="border-green-500 text-green-600 text-xs " variant="outline"><FaCircleCheck className='mr-1' /> Actively Hiring</Badge>
-     <Badge className="border-purple-500 text-purple-600 text-xs " variant="outline"><IoRocketSharp className='mr-1' />Amazing growth</Badge>
+     <Badge className="border-purple-500 text-purple-600 text-xs " variant="outline"><IoRocketSharp className='mr-1' />Good  growth</Badge>
      
      <Badge className="border-yellow-500 text-yellow-600 text-xs " variant="outline"><RiEmotionHappyFill className='mr-1' />Satisfied</Badge>
 
@@ -367,7 +367,7 @@ const HomePage = () => {
 
                 {/* Main */}
 
-                <div className="">
+<div className="">
   <div className="overflow-y-auto mx-auto">
     <img src={BannerImg} className="w-full" alt="" /> {/* Set width to 100% */}
   </div>
