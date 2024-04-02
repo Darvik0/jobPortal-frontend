@@ -11,6 +11,24 @@ import {
     NavigationMenuViewport,
   } from "@/components/ui/navigation-menu"
 
+  import {
+    Carousel,
+    CarouselContent,
+    CarouselItem,
+    CarouselNext,
+    CarouselPrevious,
+  } from "@/components/ui/carousel"
+
+  import {
+    Card,
+    CardContent,
+    CardDescription,
+    CardFooter,
+    CardHeader,
+    CardTitle,
+  } from "@/components/ui/card"
+  
+
 import { navigationMenuTriggerStyle } from "@/components/ui/navigation-menu"
 import bgimg from '../images/bgimg.jpg';
 
@@ -38,7 +56,7 @@ const LandingPage = () => {
 
     return (
         <div className="flex flex-col w-screen h-screen text-white overflow-y-auto">
-            <nav className={`fixed w-full ${isSticky ? 'bg-black' : 'bg-transparent'} z-10 transition-all duration-300 ease-in-out`}>
+            <nav className={`fixed w-full ${isSticky ? 'black' : 'transparent'} z-10 transition-all duration-300 ease-in-out`}>
                 <div className="flex items-center justify-between flex-wrap p-6">
                     <div className="flex items-center flex-shrink-0 text-white mr-6">
                         <a href="/" className='transition ease-out delay-100  hover:-translate-y-1 hover:scale-125 '>
@@ -58,13 +76,13 @@ const LandingPage = () => {
                     </div>
                     <div className="w-full block flex-grow lg:flex lg:items-center lg:w-auto">
                         <div className="text-[17px] lg:flex-grow">
-                            <a href="/43" className="transition ease-out delay-100 hover:-translate-y-1 hover:scale-110 block mt-4 lg:inline-block lg:mt-0 ml-10">
+                            <a href="/home" className="transition ease-out delay-100 hover:-translate-y-1 hover:scale-110 block mt-4 lg:inline-block lg:mt-0 ml-10">
                                 Jobs
                             </a>
                             <a href="/" className="transition ease-out delay-100 hover:-translate-y-1 hover:scale-110 block mt-4 lg:inline-block lg:mt-0 ml-10">
                                 Pricing
                             </a>
-                            <a href="/" className="transition ease-out delay-100 hover:-translate-y-1 hover:scale-110 block mt-4 lg:inline-block lg:mt-0 ml-10">
+                            <a href="/home" className="transition ease-out delay-100 hover:-translate-y-1 hover:scale-110 block mt-4 lg:inline-block lg:mt-0 ml-10">
                                 Discover
                             </a>
                         </div>
@@ -80,16 +98,11 @@ const LandingPage = () => {
                 <div className="flex flex-col items-start h-screen text-white py-56 px-16">
                     <h1 className='whitespace-normal text-6xl mb-4 mt-28'>Bridge to Your Dream Job.</h1>
                     <h1 className='whitespace-normal text-6xl mb-28'>Embark on Your Career Voyage.</h1>
-                    <a href="/sign-up" className="transition ease-out delay-100 bg-white hover:-translate-y-1 hover:scale-110 hover:bg-[#0000FF] hover:text-white duration-300 mt-2 text-[17px] inline-block px-5 bg-white py-3 leading-none font-bold text-black rounded-full border-white">Start Today</a>
+                    <a href="/sign-up" className="transition ease-out delay-100 bg-white hover:-translate-y-1 hover:scale-110 hover:bg-[#0000FF] hover:text-white duration-300 mt-2 text-[17px]  px-5 bg-white py-3 leading-none font-bold text-black rounded-full border-white">Start Today</a>
+                    <a href="/" className="transition ease-out delay-100   hover:-translate-y-1 hover:scale-110   duration-300 mt-2 text-[17px]   px-3   py-4 leading-none font-bold text-white rounded-full border-white">Learn more ↗</a>
                 </div>
             </div>
-
-            <div className="object-cover w-full h-full bg-[#0000FF]">
-                <div className="flex flex-col items-start h-screen text-white py-56 px-16">
-                    <h1 className='whitespace-normal text-6xl mb-8'>The job awaits for you</h1>
-                     <a href="/sign-up" className="transition ease-out delay-100 bg-white hover:-translate-y-1 hover:scale-110 hover:bg-[#0000FF] hover:text-white duration-300 mt-4 text-[17px] inline-block px-5 bg-white py-3 leading-none font-bold text-black rounded-full border-white">Start Today</a>
-                </div>
-            </div>
+ 
         </div>
     );
 }

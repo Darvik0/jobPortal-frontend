@@ -84,7 +84,7 @@ function SignUp() {
                     </div>
 
                     <div className="flex flex-col transition ease-out delay-100  hover:-translate-y-1 hover:scale-105">
-                        <Label htmlFor="password" className="text-left  text-zinc-950 mb-2">Select Role</Label>
+                        <Label htmlFor="password" className="text-left  text-zinc-950 mb-2">Who are you?</Label>
 
 
                     <Select className=" transition ease-out delay-100  hover:-translate-y-1 hover:scale-105 block mb-1 w-96 px-4 py-5 border-2 border-gray-500 rounded-md focus:outline-none">

@@ -22,6 +22,8 @@ import Login from './Pages/Login'
 import SignUp from './Pages/SignUp'
 import Crash from './Pages/Crash';
 import LandingPage from './Pages/LandingPage';
+import HomePage from './Pages/HomePage';
+import JobDetails from './Pages/JobDetails' 
 
 function App() {
   const [count, setCount] = useState(0)
@@ -30,6 +32,8 @@ function App() {
     <BrowserRouter>
       <Routes>
         <Route path='/' exact element={<LandingPage />} />
+        <Route path='/details' exact element={<JobDetails />} />
+        <Route path='/home' exact element={<HomePage />} />
         <Route path='/sign-in' exact element={<Login />} />
         <Route path='/sign-up' exact element={<SignUp />} />
         <Route path='/*' exact element={<Crash />} />

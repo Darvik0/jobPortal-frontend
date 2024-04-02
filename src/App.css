@@ -45,9 +45,9 @@
   background-size: cover;
   background-repeat: no-repeat;
  }
-.card {
-  padding: 2em;
-}
+
+ 
+ 
 
 .read-the-docs {
   color: #888;
@@ -69,12 +69,51 @@
   right: 0;
 }
 
-.bgrblack {
-  background-color: black;
+ 
+
+::-webkit-scrollbar-thumb {
+   border-radius: 100px;
 }
 
+.truncate-multiline-3 {
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  font-family: Inter;
+  }
 
 
+.line-spacing {
+  line-height: 1.5;  
+}
+
+ 
+
+.black {
+  background-color: #000000; /* or any other black color value */
+}
+
+.transparent {
+  background-color: transparent;
+}
+
+/* Default styles for the navigation bar */
+.navbar {
+  position: sticky;
+  top: 0;
+  width: 100%;
+  z-index: 1000; /* Adjust z-index as needed */
+  background-color: transparent; /* Initial background color */
+  transition: background-color 0.3s ease; /* Smooth transition effect */
+}
+
+/* Change background color when scrolled */
+.navbar:scrolled {
+  background-color: black; /* Change to desired background color */
+}
+
+ 
 .spin-reverse {
   animation: spin-reverse 3s linear infinite; /* Adjust duration and other properties as needed */
 }

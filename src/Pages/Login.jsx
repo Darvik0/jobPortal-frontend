@@ -22,9 +22,13 @@ function Login() {
 
     return (
         <div className=" flex flex-col lg:flex-row h-screen">
+
+            
             {/* Left side - Login Form */}
             <div className="lg:w-1/2 flex items-center justify-center">
                 <div className="max-w-md w-full space-y-9">
+
+                    
                     <h2  className="title pb-5 mt-4 text-5xl text-zinc-900 font-semibold text-center lg:text-left">
                         Sign in 
                     </h2>
