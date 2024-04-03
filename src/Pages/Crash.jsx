@@ -8,7 +8,7 @@ const Crash = () => {
         <div className="flex flex-col items-center justify-center h-screen bg-diffBlue text-white">
             
             <div className="text-primary">
-                <Lottie className='w-96 h-96'   animationData={Cat} loop={true} /> 
+                <Lottie className='w-96 h-96' animationData={Cat} loop={true} /> 
             </div>
             <Label className='whitespace-normal text-center text-4xl mb-8'>PAGE NOT FOUND</Label>
         </div>

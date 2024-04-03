@@ -69,11 +69,11 @@ export const JobDescription = () => {
 
     <br />
 
-      What to Expect<br />
-      The Role<br /><br />
+    <b> What to Expect<br />
+      The Role<br /><br /></b> 
       We are looking for a highly motivated mobile engineer specializing in creating exceptional user experiences for our users. You will need to demonstrate strong software engineering skills, excellent interpersonal communication, tenacity, extreme ownership, and the ability to accept and give meaningful technical feedback. You will be responsible for designing architecture, writing correct, robust code, maintaining and improving existing functionality, and shipping new features. You will collaborate with our design team as well as vehicle UI and back-end developers. Our team strives to set the bar for vehicle mobile user experience. We want to work with people who are excited by this goal and have the talent to deliver on it.<br /><br />
-      What You’ll Do<br />
-      Responsibilities<br /><br />
+     <b> What You’ll Do<br />
+      Responsibilities<br /><br /></b>
       Design, code and maintain mobile user experiences end-to-end.<br />
       Optimize code for performance, stability, and maintainability.<br />
       Work with a cross-functional team of hardware engineers, application/UI software engineers, QA/Validation, and designers<br /><br />
@@ -150,7 +150,7 @@ const AboutCompany = () => {
           <div className="flex items-center pt-2">
            
             <span className="text-xs text-muted-foreground">
-              Joined December 2024
+              Joined April 2024
             </span>
           </div>
         </div>
@@ -377,6 +377,7 @@ const HomePage = () => {
                                 <DropdownMenuItem>Applications</DropdownMenuItem>
                                 <DropdownMenuItem>Profile</DropdownMenuItem>
                                 <DropdownMenuItem>Settings</DropdownMenuItem>
+                                <DropdownMenuItem className="text-red-400 hover:text-red-400">Sign out</DropdownMenuItem>
                             </DropdownMenuContent>
                         </DropdownMenu>
                     </div> 
