@@ -4,6 +4,7 @@ import { Button } from "../components/ui/button";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar"
 import { JobDescription } from './HomePage';
 import { PiBriefcaseBold } from "react-icons/pi";
+import { ApplyForm } from './HomePage'
 
 
   import {
@@ -57,83 +58,7 @@ import React, { useState, useEffect } from 'react';
 import { IoRocketSharp } from "react-icons/io5";
 import { RiEmotionHappyFill } from "react-icons/ri";
 
-const ApplyForm = () => {
-  return (
-    <Dialog className=" "> {/* Adjust the width as needed */}
-<form action="">
-  <DialogTrigger asChild>
-    <Button className="px-10 bg-black text-white transition ease-out delay-100 rounded-full  hover:-translate-y-1 hover:scale-100    hover:bg-diffBlue hover:text-white   "  >Apply</Button>
-  </DialogTrigger>
-  <DialogContent className="sm:max-w-[525px]  "> {/* Adjust the maximum width as needed */}
-    <DialogHeader>
-      <DialogTitle>Applying to <DialogTitle className="mt-2   text-2xl font-bold  "> Senior Software Engineer</DialogTitle></DialogTitle>
-      <DialogDescription>
-        TESLA - Innovating electric vehicles and sustainable energy solutions. 
-      </DialogDescription>
-    </DialogHeader>
-    <div className="grid gap-4 py-4">
-      <div className="grid grid-row gap-4">
-        <Label className="text-left">
-          Name
-        </Label>
-        <Input
-          id="name"
-          className="col-span-full"
-        />
-      </div>
-      <div className="grid grid-row  gap-4">
-        <Label  className="text-left">
-          Email
-        </Label>
-        <Input
-          id="username"
-          className="col-span-10"
-          type="email"
-        />
-      </div>
 
-      <div className="grid grid-row items-center gap-4">
-        <Label  className="text-left">
-          Phone Number
-        </Label>
-        <Input
-          id="phoneNumber"
-          
-          className="col-span-12"
-        />
-      </div>
-
-      <div className="grid grid-row items-center gap-4">
-        <Label  className="text-left">
-        Cover Letter
-        </Label>
-        <Input
-          id="coverLetter"
-          type="file"
-          className="col-span-12"
-        />
-      </div>
-
-      <div className="grid grid-row  items-center gap-4">
-        <Label  className="text-left">
-          Resume
-        </Label>
-        <Input
-          id="resume"
-          className="col-span-12"
-          type="file"
-        />
-      </div>
-    </div>
-    <DialogFooter>
-      <Button type="submit">Apply</Button>
-    </DialogFooter>
-  </DialogContent>
-</form>
-</Dialog>
-  );
-
-}
 
   
 

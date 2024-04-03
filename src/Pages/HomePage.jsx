@@ -6,7 +6,8 @@ import { motion } from 'framer-motion';
 import { IoIosAddCircle } from "react-icons/io";
 import BannerImg from '../images/banner.png';
 import { PiBriefcaseBold } from "react-icons/pi";
-
+import Yay from "../animations/Yay.json";
+import Lottie from "lottie-react";
    
   import {
     Card,
@@ -161,7 +162,7 @@ const AboutCompany = () => {
 
  
 
-const ApplyForm = () => {
+export const ApplyForm = () => {
   const [isSubmitted, setIsSubmitted] = useState(false);
 
   const handleSubmit = (event) => {
@@ -218,11 +219,16 @@ const ApplyForm = () => {
             </>
           ) : (
             <DialogHeader>
-              <DialogTitle>Congratulations!</DialogTitle>
-              
-              <DialogDescription>
+          
+            <Lottie   animationData={Yay} loop={true} /> 
+        
+<center>
+              <DialogTitle className="text-3xl mb-5">Congratulations!</DialogTitle>
+
+             
+              <DialogDescription className="text-xl">
                 We have received your application. We will review it and get back to you soon.
-              </DialogDescription>
+              </DialogDescription></center>
             </DialogHeader>
           )}
         </DialogContent>
