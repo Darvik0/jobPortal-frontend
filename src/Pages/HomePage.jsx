@@ -130,7 +130,7 @@ const AboutCompany = () => {
     <HoverCardContent className="">
       <div className="flex space-x-4">
         <Avatar>
-          <AvatarImage src="https://www.logodesignlove.com/images/monograms/tesla-symbol.jpg" />
+          <AvatarImage  src="https://www.logodesignlove.com/images/monograms/tesla-symbol.jpg" />
          </Avatar>
         <div className="space-y-1">
           <h4 className=" font-semibold">Tesla</h4>
@@ -162,82 +162,74 @@ const AboutCompany = () => {
  
 
 const ApplyForm = () => {
-    return (
-      <Dialog className=" "> {/* Adjust the width as needed */}
-  <form action="">
-    <DialogTrigger asChild>
-      <Button className="px-10 bg-black text-white transition ease-out delay-100 rounded-full  hover:-translate-y-1 hover:scale-105    hover:bg-diffBlue hover:text-white   " variant="outline">Apply</Button>
-    </DialogTrigger>
-    <DialogContent className="sm:max-w-[525px]  "> {/* Adjust the maximum width as needed */}
-      <DialogHeader>
-        <DialogTitle>Applying to <DialogTitle className="mt-2   text-2xl font-bold  "> Senior Software Engineer</DialogTitle></DialogTitle>
-        <DialogDescription>
-          TESLA - Innovating electric vehicles and sustainable energy solutions. 
-        </DialogDescription>
-      </DialogHeader>
-      <div className="grid gap-4 py-4">
-        <div className="grid grid-row gap-4">
-          <Label className="text-left">
-            Name
-          </Label>
-          <Input
-            id="name"
-            className="col-span-full"
-          />
-        </div>
-        <div className="grid grid-row  gap-4">
-          <Label  className="text-left">
-            Email
-          </Label>
-          <Input
-            id="username"
-            className="col-span-10"
-            type="email"
-          />
-        </div>
+  const [isSubmitted, setIsSubmitted] = useState(false);
 
-        <div className="grid grid-row items-center gap-4">
-          <Label  className="text-left">
-            Phone Number
-          </Label>
-          <Input
-            id="phoneNumber"
-            
-            className="col-span-12"
-          />
-        </div>
-
-        <div className="grid grid-row items-center gap-4">
-          <Label  className="text-left">
-          Cover Letter
-          </Label>
-          <Input
-            id="coverLetter"
-            type="file"
-            className="col-span-12"
-          />
-        </div>
-
-        <div className="grid grid-row  items-center gap-4">
-          <Label  className="text-left">
-            Resume
-          </Label>
-          <Input
-            id="resume"
-            className="col-span-12"
-            type="file"
-          />
-        </div>
-      </div>
-      <DialogFooter>
-        <Button type="submit">Apply</Button>
-      </DialogFooter>
-    </DialogContent>
-  </form>
-</Dialog>
-
-    );
+  const handleSubmit = (event) => {
+    event.preventDefault(); // Prevent default form submission behavior
+    // Your logic for handling form submission can go here
+    // For now, just setting the state to indicate submission
+    setIsSubmitted(true);
   };
+
+  const handleApplyClick = () => {
+    setIsSubmitted(true); // Set the state to indicate submission when the Apply button is clicked
+  };
+
+  return (
+    <Dialog>
+      <form onSubmit={handleSubmit}>
+        <DialogTrigger asChild>
+          <Button  className="px-10 bg-black text-white transition ease-out delay-100 rounded-full  hover:-translate-y-1 hover:scale-105    hover:bg-diffBlue hover:text-white   " variant="outline">Apply</Button>
+        </DialogTrigger>
+        <DialogContent className="sm:max-w-[525px]">
+          {!isSubmitted ? (
+            <>
+              <DialogHeader>
+                <DialogTitle>Applying to Senior Software Engineer</DialogTitle>
+                <DialogDescription>
+                  TESLA - Innovating electric vehicles and sustainable energy solutions.
+                </DialogDescription>
+              </DialogHeader>
+              <div className="grid gap-4 py-4">
+                <div className="grid grid-row gap-4">
+                  <Label className="text-left">Name</Label>
+                  <Input id="name" className="col-span-full" />
+                </div>
+                <div className="grid grid-row gap-4">
+                  <Label className="text-left">Email</Label>
+                  <Input id="username" className="col-span-10" type="email" />
+                </div>
+                <div className="grid grid-row items-center gap-4">
+                  <Label className="text-left">Phone Number</Label>
+                  <Input id="phoneNumber" className="col-span-12" />
+                </div>
+                <div className="grid grid-row items-center gap-4">
+                  <Label className="text-left">Cover Letter</Label>
+                  <Input id="coverLetter" type="file" className="col-span-12" />
+                </div>
+                <div className="grid grid-row items-center gap-4">
+                  <Label className="text-left">Resume</Label>
+                  <Input id="resume" className="col-span-12" type="file" />
+                </div>
+              </div>
+              <DialogFooter>
+                <Button  onClick={handleApplyClick} type="submit">Apply</Button>
+              </DialogFooter>
+            </>
+          ) : (
+            <DialogHeader>
+              <DialogTitle>Congratulations!</DialogTitle>
+              
+              <DialogDescription>
+                We have received your application. We will review it and get back to you soon.
+              </DialogDescription>
+            </DialogHeader>
+          )}
+        </DialogContent>
+      </form>
+    </Dialog>
+  );
+};
   
 const ListCard = () => (
     <Card className="transition ease-out delay-100  hover:-translate-y-1 hover:scale-[1.01] border-solid border-2 border-gray-300 w-full m-3 rounded-2xl">
@@ -393,7 +385,7 @@ const HomePage = () => {
 
 <div className="">
   <div className="overflow-y-auto mx-auto">
-    <img src={BannerImg} className="w-full" alt="" /> {/* Set width to 100% */}
+    <img  draggable="false" src={BannerImg} className="w-full" alt="" /> {/* Set width to 100% */}
   </div>
   <main className="flex-1 overflow-y-auto max-w-screen-lg mx-auto">
     <div className="font-bold mb-4 mt-8  px-10 flex justify-between">

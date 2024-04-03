@@ -118,4 +118,6 @@
   animation: spin-reverse 3s linear infinite; /* Adjust duration and other properties as needed */
 }
 
- 
+ Input {
+  font: Inter;
+ }

@@ -149,7 +149,7 @@ const HomePage = () => {
         <div className="flex flex-col w-screen h-screen text-black overflow-y-auto">
 
             {/* Navbar */}
-            <nav className="transition-all duration-300 ease-in-out">
+            <nav className="border-b-2 transition-all duration-300 ease-in-out">
 
            
     <div className="flex items-center justify-between px-2 py-4 mx-auto max-w-screen-lg"> {/* Adjusted padding */}
@@ -206,13 +206,14 @@ const HomePage = () => {
                 {/* Main */}
 
                 <div className="">
-  <div className="overflow-y-auto mx-auto">
-    <img
-      src="https://www.schearers.com/wp-content/uploads/2022/04/electric-banner.jpg"
-      className="w-full h-auto " // Adjust the max height as per your requirement
-      alt=""
-    />
-  </div>
+                <div class="overflow-y-auto mx-auto">
+  <img
+  draggable="false"
+    src="https://digitalassets.tesla.com/tesla-contents/image/upload/h_1800,w_2880,c_fit,f_auto,q_auto:best/Model-S-Exterior-Hero-Desktop-Global"
+    class="w-full h-[480px] object-cover"
+    alt=""
+  />
+</div>
 
   <main className="flex-1 overflow-y-auto max-w-screen-lg mx-auto">
     <div className="font-bold mb-4 mt-10 flex justify-between">
