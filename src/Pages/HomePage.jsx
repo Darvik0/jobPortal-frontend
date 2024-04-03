@@ -5,6 +5,7 @@ import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar"
 import { motion } from 'framer-motion';
 import { IoIosAddCircle } from "react-icons/io";
 import BannerImg from '../images/banner.png';
+import { PiBriefcaseBold } from "react-icons/pi";
 
    
   import {
@@ -61,42 +62,64 @@ import { RiEmotionHappyFill } from "react-icons/ri";
 
 export const JobDescription = () => {
   return (
-    <Label className="  leading-6 line-spacing mt-3">
-      Tesla is seeking a highly skilled and experienced Senior Developer to join our dynamic team. As a Senior Developer at Tesla, you will play a key role in developing cutting-edge software solutions that power our innovative electric vehicles, energy products, and autonomous driving technologies. You will work alongside talented engineers, designers, and product managers to drive innovation and create impactful solutions that shape the future of transportation.
+    <p className="leading-8 line-spacing mt-3">
 
-      Responsibilities:
+    <ShortDescription/>
 
-      Design, develop, and maintain scalable and reliable software solutions for Tesla's electric vehicles, energy products, and autonomous driving technologies.
-      Collaborate with cross-functional teams to gather requirements, define technical specifications, and deliver high-quality software solutions that meet business needs.
-      Architect and implement software systems using modern programming languages and frameworks, with a focus on performance, reliability, and security.
-      Lead code reviews, provide technical guidance, and mentor junior developers to foster a culture of continuous learning and improvement.
-      Stay up-to-date with the latest industry trends, technologies, and best practices, and contribute to the continuous improvement of Tesla's software development processes and methodologies.
+    <br />
 
-      Qualifications:
-
-      Bachelor's degree in Computer Science, Engineering, or a related field; Master's degree preferred.
-      5+ years of professional experience in software development, with a strong focus on backend development, web development, or mobile app development.
-      Proficiency in one or more programming languages such as Python, JavaScript, Java, or C++.
-      Experience working with cloud platforms such as AWS, Azure, or Google Cloud Platform.
-      Solid understanding of software engineering principles, design patterns, and best practices.
-      Excellent problem-solving skills, attention to detail, and ability to work independently and collaboratively in a fast-paced environment.
-      Strong communication skills and ability to effectively collaborate with cross-functional teams.
-
-      Benefits:
-
-      Competitive salary and stock options
-      Comprehensive health benefits package
-      401(k) retirement plan with employer match
-      Flexible work schedule and remote work options
-      Employee discounts on Tesla products and services
-      Opportunities for career growth and advancement
-
-      How to Apply:
-
-      Interested candidates are encouraged to apply online through the Tesla careers website. Please include a resume, cover letter, and any relevant portfolio or code samples showcasing your work.
-    </Label>
+      What to Expect<br />
+      The Role<br /><br />
+      We are looking for a highly motivated mobile engineer specializing in creating exceptional user experiences for our users. You will need to demonstrate strong software engineering skills, excellent interpersonal communication, tenacity, extreme ownership, and the ability to accept and give meaningful technical feedback. You will be responsible for designing architecture, writing correct, robust code, maintaining and improving existing functionality, and shipping new features. You will collaborate with our design team as well as vehicle UI and back-end developers. Our team strives to set the bar for vehicle mobile user experience. We want to work with people who are excited by this goal and have the talent to deliver on it.<br /><br />
+      What You’ll Do<br />
+      Responsibilities<br /><br />
+      Design, code and maintain mobile user experiences end-to-end.<br />
+      Optimize code for performance, stability, and maintainability.<br />
+      Work with a cross-functional team of hardware engineers, application/UI software engineers, QA/Validation, and designers<br /><br />
+      What You’ll Bring<br />
+      Requirements<br /><br />
+      Bachelor’s Degree in Computer Science, Software Engineering, or equivalent.<br />
+      Minimum 2 years’ experience in Mobile (iOS/Android) development.<br />
+      Proficient in at least one of: Swift, Kotlin, Objective-C, or Java.<br />
+      Familiar with JavaScript/TypeScript. Experience with React/React Native is preferred.<br />
+      Excellent grasp of fundamental computer science concepts, good at solving complex technical problem.<br />
+      Experience using common design patterns. High standards for code quality, maintainability, and performance.<br />
+      Experience creating, maintaining, and shipping top-ranking mobile apps is preferred.<br /><br />
+      Compensation and Benefits<br />
+      Benefits<br /><br />
+      Along with competitive pay, as a full-time Tesla employee, you are eligible for the following benefits at day 1 of hire:<br />
+      Aetna PPO and HSA plans less than 2 medical plan options with $0 payroll deduction<br />
+      Family-building, fertility, adoption and surrogacy benefits<br />
+      Dental (including orthodontic coverage) and vision plans, both have options with a $0 paycheck contribution<br />
+      Company Paid (Health Savings Account) HSA Contribution when enrolled in the High Deductible Aetna medical plan with HSA<br />
+      Healthcare and Dependent Care Flexible Spending Accounts (FSA)<br />
+      LGBTQ+ care concierge services<br />
+      401(k) with employer match, Employee Stock Purchase Plans, and other financial benefits<br />
+      Company paid Basic Life, AD&D, short-term and long-term disability insurance<br />
+      Employee Assistance Program<br />
+      Sick and Vacation time (Flex time for salary positions), and Paid Holidays<br />
+      Back-up childcare and parenting support resources<br />
+      Voluntary benefits to include: critical illness, hospital indemnity, accident insurance, theft & legal services, and pet insurance<br />
+      Weight Loss and Tobacco Cessation Programs<br />
+      Tesla Babies program<br />
+      Commuter benefits<br />
+      Employee discounts and perks program<br /><br />
+      Expected Compensation<br />
+      $96,000 - $336,000/annual salary + cash and stock awards + benefits<br /><br />
+      Pay offered may vary depending on multiple individualized factors, including market location, job-related knowledge, skills, and experience. The total compensation package for this position may also include other elements dependent on the position offered. Details of participation in these benefit plans will be provided if an employee receives an offer of employment.<br /><br />
+      Tesla is an Equal Opportunity / Affirmative Action employer committed to diversity in the workplace. All qualified applicants will receive consideration for employment without regard to race, color, religion, sex, sexual orientation, age, national origin, disability, protected veteran status, gender identity or any other factor protected by applicable federal, state or local laws.<br /><br />
+      Tesla is also committed to working with and providing reasonable accommodations to individuals with disabilities. Please let your recruiter know if you need an accommodation at any point during the interview process.<br /><br />
+      For quick access to screen reading technology compatible with this site click here to download a free compatible screen reader (free step by step tutorial can be found here). Please contact accommodationrequest@tesla.com for additional information or to request accommodations.<br /><br />
+     </p>
   );
 }
+
+const ShortDescription = () => {
+  return (
+    <p className='leading-7 line-spacing mt-3'>As a Senior Software Engineer, you will lead the development of robust software solutions, guiding the team through design, implementation, and deployment phases. Your role involves collaborating with stakeholders to define project requirements, architecting software systems, and ensuring adherence to coding standards. You'll provide technical mentorship to junior engineers, conduct code reviews, and troubleshoot complex technical issues. Additionally, you'll contribute to the technical roadmap, stay updated on industry trends, and communicate effectively with cross-functional teams to drive project success.</p>
+  );
+}
+
 
 const AboutCompany = () => {
   return (
@@ -231,10 +254,11 @@ const ListCard = () => (
 
       
     </div>
-    <div className="text-gray-400 font-medium flex flex-row text-right">
+    <div className="text-gray-400 text-sm font-medium flex flex-row text-right">
   <span className='flex items-center'><MdLocationOn className="mr-1"/> California</span>  
   <span className='ml-4 flex items-center'><TbCoinRupeeFilled  className="mr-1"/>100K-240K</span>
-  <span className='ml-4 flex items-center'><IoTime  className="mr-1" />4 Hours ago</span>    
+  <span className='ml-4 flex items-center'><IoTime  className="mr-1" />4 Hours ago</span> 
+  <span className='ml-4 flex items-center'><PiBriefcaseBold  className="mr-1" />Full-time</span>   
 </div>
 
   </div>
@@ -263,7 +287,7 @@ const ListCard = () => (
     </CardContent>
     <CardFooter className="flex ">
        <ApplyForm /> 
-       <Button  className="rounded-full transition ease-out delay-100  hover:-translate-y-1 hover:scale-105 ml-4 px-10 border-solid border-2 border-black hover:border-diffBlue hover:bg-diffBlue hover:text-white  bg-white text-black"  >Details</Button>
+     <a href="/details">  <Button className="hover:underline-0 rounded-full transition ease-out delay-100  hover:-translate-y-1 hover:scale-105 ml-4 px-10 border-solid border-2 border-black hover:bg-white   bg-white text-black"  >Details</Button></a>
 
      </CardFooter>
   </Card>
@@ -314,7 +338,7 @@ const HomePage = () => {
     <div className="flex items-center justify-between px-2 py-4 mx-auto max-w-screen-lg"> {/* Adjusted padding */}
    
         <div className="flex items-center flex-shrink-0 text-black mr-6">
-            <a href="/" className='transition ease-out delay-100  hover:-translate-y-1 hover:scale-125 '>
+            <a href="/home" className='transition ease-out delay-100  hover:-translate-y-1 hover:scale-125 '>
                 <svg width="50" height="50" viewBox="0 0 274 606" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M46 150C119 150.167 261 182.7 245 311.5C229 440.3 204.667 548 198 602.5" stroke="black" strokeWidth="55"/>
                     <path d="M246 445C166.528 444.849 11.9384 415.328 29.3569 298.454C46.7754 181.58 65.6455 53.4537 72.9032 4" stroke="black" strokeWidth="55"/>

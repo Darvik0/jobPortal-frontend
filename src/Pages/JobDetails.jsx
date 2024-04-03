@@ -3,6 +3,7 @@ import { Label } from "@/components/ui/label";
 import { Button } from "../components/ui/button";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar"
 import { JobDescription } from './HomePage';
+import { PiBriefcaseBold } from "react-icons/pi";
 
 
   import {
@@ -56,6 +57,83 @@ import React, { useState, useEffect } from 'react';
 import { IoRocketSharp } from "react-icons/io5";
 import { RiEmotionHappyFill } from "react-icons/ri";
 
+const ApplyForm = () => {
+  return (
+    <Dialog className=" "> {/* Adjust the width as needed */}
+<form action="">
+  <DialogTrigger asChild>
+    <Button className="px-10 bg-black text-white transition ease-out delay-100 rounded-full  hover:-translate-y-1 hover:scale-100    hover:bg-diffBlue hover:text-white   "  >Apply</Button>
+  </DialogTrigger>
+  <DialogContent className="sm:max-w-[525px]  "> {/* Adjust the maximum width as needed */}
+    <DialogHeader>
+      <DialogTitle>Applying to <DialogTitle className="mt-2   text-2xl font-bold  "> Senior Software Engineer</DialogTitle></DialogTitle>
+      <DialogDescription>
+        TESLA - Innovating electric vehicles and sustainable energy solutions. 
+      </DialogDescription>
+    </DialogHeader>
+    <div className="grid gap-4 py-4">
+      <div className="grid grid-row gap-4">
+        <Label className="text-left">
+          Name
+        </Label>
+        <Input
+          id="name"
+          className="col-span-full"
+        />
+      </div>
+      <div className="grid grid-row  gap-4">
+        <Label  className="text-left">
+          Email
+        </Label>
+        <Input
+          id="username"
+          className="col-span-10"
+          type="email"
+        />
+      </div>
+
+      <div className="grid grid-row items-center gap-4">
+        <Label  className="text-left">
+          Phone Number
+        </Label>
+        <Input
+          id="phoneNumber"
+          
+          className="col-span-12"
+        />
+      </div>
+
+      <div className="grid grid-row items-center gap-4">
+        <Label  className="text-left">
+        Cover Letter
+        </Label>
+        <Input
+          id="coverLetter"
+          type="file"
+          className="col-span-12"
+        />
+      </div>
+
+      <div className="grid grid-row  items-center gap-4">
+        <Label  className="text-left">
+          Resume
+        </Label>
+        <Input
+          id="resume"
+          className="col-span-12"
+          type="file"
+        />
+      </div>
+    </div>
+    <DialogFooter>
+      <Button type="submit">Apply</Button>
+    </DialogFooter>
+  </DialogContent>
+</form>
+</Dialog>
+  );
+
+}
 
   
 
@@ -71,13 +149,13 @@ const HomePage = () => {
         <div className="flex flex-col w-screen h-screen text-black overflow-y-auto">
 
             {/* Navbar */}
-            <nav className="border-b-2 transition-all duration-300 ease-in-out">
+            <nav className="transition-all duration-300 ease-in-out">
 
            
     <div className="flex items-center justify-between px-2 py-4 mx-auto max-w-screen-lg"> {/* Adjusted padding */}
    
         <div className="flex items-center flex-shrink-0 text-black mr-6">
-            <a href="/" className='transition ease-out delay-100  hover:-translate-y-1 hover:scale-125 '>
+            <a href="/home" className='transition ease-out delay-100  hover:-translate-y-1 hover:scale-125 '>
                 <svg width="50" height="50" viewBox="0 0 274 606" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M46 150C119 150.167 261 182.7 245 311.5C229 440.3 204.667 548 198 602.5" stroke="black" strokeWidth="55"/>
                     <path d="M246 445C166.528 444.849 11.9384 415.328 29.3569 298.454C46.7754 181.58 65.6455 53.4537 72.9032 4" stroke="black" strokeWidth="55"/>
@@ -127,28 +205,63 @@ const HomePage = () => {
 
                 {/* Main */}
 
-                <div className="flex flex-1">
-        <main className="flex-1 overflow-y-auto max-w-screen-lg mx-auto">
-          <div className="font-bold mb-4 mt-10 px-10 flex justify-between">
+                <div className="">
+  <div className="overflow-y-auto mx-auto">
+    <img
+      src="https://www.schearers.com/wp-content/uploads/2022/04/electric-banner.jpg"
+      className="w-full h-auto " // Adjust the max height as per your requirement
+      alt=""
+    />
+  </div>
 
-
- 
-            <p className="text-4xl">Job Title</p>
-          
-           </div>
-          <div>
-            <p className="text-[#222222]  leading-7 line-spacing mt-3">
-
-                <JobDescription />
-            </p>
-           
+  <main className="flex-1 overflow-y-auto max-w-screen-lg mx-auto">
+    <div className="font-bold mb-4 mt-10 flex justify-between">
+      <div className="flex items-center justify-between mb-10">
+        <div className="flex items-center gap-4">
+          <Avatar className="hidden h-12 w-12 sm:flex">
+            <AvatarImage
+              className="rounded-md"
+              src="https://www.logodesignlove.com/images/monograms/tesla-symbol.jpg"
+              alt="Avatar"
+            />
+          </Avatar>
+          <div className="grid gap-1">
+            <Label className="text-4xl">Senior Software Engineer</Label>
+            <Label className="text-gray-500 text-xl font-bold">At TESLA</Label>
           </div>
-         
-        </main>
-      </div>
- 
-
         </div>
+      </div>
+
+      <div className="text-gray-400 font-medium      flex flex-row text-right">
+        <span className="flex items-center">
+          <MdLocationOn className="mr-1" /> California
+        </span>
+        <span className="ml-4 flex items-center">
+          <TbCoinRupeeFilled className="mr-1" />100K-240K
+        </span>
+        <span className="ml-4 flex items-center">
+          <IoTime className="mr-1" />4 Hours ago
+        </span>
+        <span className="ml-4 flex items-center">
+          <PiBriefcaseBold className="mr-1" />Full time
+        </span>
+      </div>
+    </div>
+    <div>
+    <div className="flex mb-10">
+       <ApplyForm /> 
+     <a href="/home">  <Button className="hover:underline-0 rounded-full transition ease-out delay-100  hover:-translate-y-1 hover:scale-105 ml-4 px-10 border-solid border-2 border-black hover:bg-white   bg-white text-black"  >Back</Button></a>
+
+     </div>
+      <p className="text-lg  leading-7 line-spacing mt-3">
+        <JobDescription />
+        
+      </p>
+    </div>
+   
+  </main>
+</div>
+ </div>
     );
 }
 
