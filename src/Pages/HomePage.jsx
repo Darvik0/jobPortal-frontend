@@ -226,7 +226,7 @@ export const ApplyForm = () => {
               <DialogTitle className="text-3xl mb-5">Congratulations!</DialogTitle>
 
              
-              <DialogDescription className="text-xl">
+              <DialogDescription className="text-xl pb-10 ">
                 We have received your application. We will review it and get back to you soon.
               </DialogDescription></center>
             </DialogHeader>
