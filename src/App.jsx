@@ -24,6 +24,7 @@ import Crash from './Pages/Crash';
 import LandingPage from './Pages/LandingPage';
 import HomePage from './Pages/HomePage';
 import JobDetails from './Pages/JobDetails' 
+import CreateJobs from './Pages/CreateJobs';
 
 function App() {
   const [count, setCount] = useState(0)
@@ -32,6 +33,7 @@ function App() {
     <BrowserRouter>
       <Routes>
         <Route path='/' exact element={<LandingPage />} />
+        <Route path='/post-job' exact element={<CreateJobs />} />
         <Route path='/details' exact element={<JobDetails />} />
         <Route path='/home' exact element={<HomePage />} />
         <Route path='/sign-in' exact element={<Login />} />

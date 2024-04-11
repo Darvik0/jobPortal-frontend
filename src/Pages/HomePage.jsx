@@ -220,7 +220,7 @@ export const ApplyForm = () => {
           ) : (
             <DialogHeader>
           
-            <Lottie   animationData={Yay} loop={true} /> 
+            <Lottie   animationData={Yay}   /> 
         
 <center>
               <DialogTitle className="text-3xl mb-5">Congratulations!</DialogTitle>
@@ -361,7 +361,7 @@ const HomePage = () => {
                     <div type="button" className="relative flex rounded-full text-sm" id="user-menu-button" aria-expanded="false" aria-haspopup="true">
                         <span className="-inset-1.5"></span>
                         <span className="sr-only"></span>
-                        <a href="/sign-up" className="mr-5 py-2 transition ease-out delay-100 hover:-translate-y-1 text-blue-700 font-semibold hover:scale-105 duration-300 mt-4 px-4 py-2 leading-none text-black rounded-full border-white mt-4 lg:mt-0 bg-blue-100 ">
+                        <a href="/post-job" className="mr-5 py-2 transition ease-out delay-100 hover:-translate-y-1 text-blue-700 font-semibold hover:scale-105 duration-300 mt-4 px-4 py-2 leading-none text-black rounded-full border-white mt-4 lg:mt-0 bg-blue-100 ">
                             <IoIosAddCircle className="inline-block"/> Add jobs
                         </a>
                         
