@@ -12,6 +12,16 @@ import Lottie from "lottie-react";
 import { CountryDropdown, RegionDropdown, CountryRegionData } from 'react-country-region-selector';
 import ReactQuill from 'react-quill';
 import 'react-quill/dist/quill.snow.css';  
+
+import {
+  Form,
+  FormControl,
+  FormDescription,
+  FormField,
+  FormItem,
+  FormLabel,
+  FormMessage,
+} from "@/components/ui/form";
  
 import {
   Select,
@@ -104,7 +114,7 @@ const TextEditor = () => {
   const [value, setValue] = useState('');
 
   return (
-    <ReactQuill className='w-full h-full' theme="snow" value={value} onChange={setValue} />
+    <ReactQuill name="jobDescription"  className='w-full h-full' theme="snow" value={value} onChange={setValue} />
   );
 }
 
@@ -146,13 +156,13 @@ const JobDetails = ({ onNext }) => {
      <div className='mt-20'>
 
      <div className="flex mt-5 space-x-3 justify-between">
-<Input className="border   focus:ring-transparent" type="text" placeholder="Job Title" /> 
+<Input name="JobTitle" className="border   focus:ring-transparent" type="text" placeholder="Job Title" /> 
  </div>
 
 
      <div className="flex space-x-3 mt-5 ">
-  <Input className="border   focus:ring-transparent" type="text" placeholder="Company name" /> 
-  <Input className="border   focus:ring-transparent" type="text" placeholder="Your name" /> 
+  <Input name="CompanyName" className="border   focus:ring-transparent" type="text" placeholder="Company name" /> 
+  <Input name="Name" className="border   focus:ring-transparent" type="text" placeholder="Your name" /> 
 </div>
 <div className="flex mt-5 space-x-3 justify-between">
 <Select>
@@ -169,7 +179,7 @@ const JobDetails = ({ onNext }) => {
         </SelectGroup>
       </SelectContent>
     </Select> 
-    <Input className="border   focus:ring-transparent" type="text" placeholder="Salary" /> 
+    <Input name="Salary" className="border   focus:ring-transparent" type="text" placeholder="Salary" /> 
 
 
     {/* change this!! */}
@@ -220,7 +230,7 @@ const JobNext = ({ onBack }) => {
      </div>
 
      <div className='  h-[300px]'>
-      <TextEditor />
+      <TextEditor  />
       </div>
 
       <div className='mt-10'>
@@ -317,13 +327,16 @@ const CreateJobs = () => {
   <div>
    </div>
   <main className="overflow-x-auto overflow-y-auto max-w-screen-md justify-center mx-auto items-center h-screen">
+
+    <form   method='POST'>
     
   {showJobDetails ? (
           <JobDetails onNext={handleNext} />
         ) : (
           <JobNext onBack={handleBack} />
         )}
-     
+
+     </form>
   </main>
 </div>
 
