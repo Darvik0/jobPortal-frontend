@@ -172,9 +172,9 @@ const JobDetails = ({ onNext }) => {
       <SelectContent>
         <SelectGroup>
           <SelectLabel>Job type</SelectLabel>
-          <SelectItem value="grapes">Full time</SelectItem>
-          <SelectItem value="pineapple">Part time</SelectItem>
-          <SelectItem value="pineapple">Intern</SelectItem>
+          <SelectItem value="full time">Full time</SelectItem>
+          <SelectItem value="part time">Part time</SelectItem>
+          <SelectItem value="intern">Intern</SelectItem>
 
         </SelectGroup>
       </SelectContent>
